@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="sendIM" type="boolean" default="false"></aura:attribute>
+     <aura:attribute name="messageReceived" type="String"></aura:attribute>
+    
+    <p>
+    Universe One - Iron Man is here !!! Why Fear Just Send Your Event!!!
+    </p>
+    <aura:handler name="HeavyWeaponsAttack" event ="c:ProblemMessage" action="{!c.sendIronMan}"/>
+    
+    <aura:if isTrue="{!v.sendIM}">
+    <p> DON'T WORRY!!</p>
+    <p> Your Message  : <lightning:formattedText value="{!v.messageReceived}" /> is received!! Iron Man is on duty</p>
+	<img src="https://media.giphy.com/media/3lvqNXheb679S/giphy.gif" height="20"/>
+    </aura:if>
+    
+    <p>
+        <c:PlanetOne/>
+    </p>
+    
+    
+    <!--
+    <p>
+        <c:PlanetTwo/>
+    </p>
+    <p>
+        <c:PlanetThree/>
+    </p>
+    <p>
+        <c:PlanetFour/>
+    </p>
+     -->
+</aura:component>
