@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p>
+        This is the Country where we are Living!!!
+    </p>
+    <aura:registerEvent name ="ChemicalWeaponsAttack" type="c:ProblemMessage"/>
+    <aura:registerEvent name ="HeavyWeaponsAttack" type="c:ProblemMessage"/>
+    <aura:registerEvent name ="ThanosAttack" type="c:ProblemMessage"/>
+    <lightning:button label ="Chemical Weapons Attack! Need Help" aura:id="CWA" onclick="{!c.callforHulk}"></lightning:button>
+    <lightning:button label ="Heavy Weapons attack! Need Help" aura:id="HWA" onclick="{!c.callforIronMan}"></lightning:button>
+    <lightning:button label ="Thanos Arrived! Need Help" aura:id="HWA" onclick="{!c.callforAvengers}"></lightning:button>
+</aura:component>
