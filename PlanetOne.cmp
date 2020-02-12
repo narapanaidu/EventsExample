@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="sendHulk" type="boolean" default="false"></aura:attribute>
+     <aura:attribute name="messageReceived" type="String"></aura:attribute>
+	
+    <p>
+        Planet One - If you are worried!! He becomes Angryy - Hulk is here !!
+    </p>
+    <aura:handler name="ChemicalWeaponsAttack" event ="c:ProblemMessage" action="{!c.sendHulk}"/>
+    
+    <aura:if isTrue="{!v.sendHulk}">
+    <p> DON'T WORRY!!</p>
+    <p> Your Message  : <lightning:formattedText value="{!v.messageReceived}" /> is received!! Hulk is on duty</p>
+	<img src="https://media.giphy.com/media/FjOsaw9z4BhrW/giphy.gif" height="20"/>
+    </aura:if>
+   
+    <p>
+        <c:COne/>
+    </p>
+    
+    <!-- Not worried as of Now
+    <p>
+        <c:CTwo/>
+    </p>
+    -->
+
+</aura:component>
